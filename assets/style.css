@@ -1,14 +1,14 @@
 :root, body {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
     min-height: 100vh;
 }
 
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: minmax(220px,1fr) 4fr;
     grid-template-rows: 200px 1fr;
 }
 
@@ -18,14 +18,69 @@
     background-color: blue;
 }
 
+.title, .sidebuttons, .sidemisc {
+    background-color: aqua;
+}
+
 .header {
+    display: grid;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     background-color: white;
 }
 
+.top-header {
+    background-color: burlywood;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.search-bar {
+    margin-right: auto;
+}
+
+.bottom-header {
+    background-color: brown;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.greeting {
+    margin-right: auto;
+}
+
 .content {
+    display: grid;
+    grid-template-columns: 3fr minmax(220px,1fr);
+    grid-template-rows: 450px 450px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background-color: grey;
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: min-content auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    background-color: #fff;
+    grid-row: 1 / -1;
+}
+
+.projects-title {
+    grid-column: 1 / -1;
+}
+.card {
+    border: 1px solid black;
+
+}
+.announcements {
+    background-color: yellow;
+}
+
+.trending {
+    background-color: orange;
+    grid-column: 2 / 3;
 }
